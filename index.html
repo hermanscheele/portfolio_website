@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Herman Scheele — Mathematics · Quant · AI</title>
+  <meta name="description" content="Herman Scheele — mathematics student at the University of Oslo working across quantitative finance and AI. Summer intern on NBIM's AI team." />
+  <meta name="author" content="Herman Scheele" />
+  <meta name="theme-color" content="#08090f" />
+
+  <!-- Open Graph (nice previews when the link is shared with recruiters) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Herman Scheele — Mathematics · Quant · AI" />
+  <meta property="og:description" content="Mathematics @ UiO. Summer intern on NBIM's AI team. Building at the intersection of math, quant finance and AI." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Living gradient background -->
+  <div class="bg" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand" aria-label="Home">
+        <span class="brand-mark">HS</span>
+        <span class="brand-dot"></span>
+      </a>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="icon-btn" href="https://github.com/hermanscheele" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.4-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/herman-scheele-14254622a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <a class="btn btn-sm" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow reveal"><span class="ping"></span> Oslo, Norway</p>
+          <h1 class="reveal">Herman<br />Scheele</h1>
+          <p class="role reveal">
+            <span class="role-static">I'm a</span>
+            <span class="role-rotator" id="roleRotator"><span>mathematician</span></span>
+          </p>
+          <p class="lead reveal">
+            Mathematics student at the University of Oslo, working at the intersection of
+            <strong>math</strong>, <strong>quantitative finance</strong> and <strong>AI</strong>.
+            Most recently a summer intern on the AI team at
+            <strong>NBIM</strong> — Norway's sovereign wealth fund. I like turning hard,
+            messy problems into things that actually ship.
+          </p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="#projects">View my work</a>
+            <a class="btn btn-ghost" href="mailto:hermni31122@gmail.com">Email me</a>
+          </div>
+          <ul class="chips reveal" aria-label="Focus areas">
+            <li>Quant research</li>
+            <li>Machine learning</li>
+            <li>Multi-agent AI</li>
+            <li>Stochastic modeling</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="avatar">
+            <div class="avatar-ring"></div>
+            <img src="assets/profile.jpg" alt="Herman Scheele" width="320" height="320"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="avatar-fallback" role="img" aria-label="Herman Scheele">HS</div>
+          </div>
+        </div>
+      </div>
+      <a href="#experience" class="scroll-hint" aria-label="Scroll to experience">
+        <span></span> Scroll
+      </a>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <header class="section-head reveal">
+        <span class="section-index">01</span>
+        <h2>Experience</h2>
+        <p class="section-sub">Where I've spent my summers — from an Oslo startup hub to Norway's sovereign wealth fund.</p>
+      </header>
+
+      <div class="timeline">
+        <!-- NBIM (featured) -->
+        <article class="xp xp-feature reveal">
+          <div class="xp-side">
+            <span class="xp-dates">Jun – Aug 2026</span>
+            <span class="tag tag-live">Featured</span>
+          </div>
+          <div class="xp-body">
+            <div class="xp-top">
+              <h3>Summer Intern — AI Team</h3>
+              <span class="xp-org">Norges Bank Investment Management (NBIM)</span>
+            </div>
+            <p>
+              Selected as one of <strong>43 summer interns from ~6,000 applicants</strong> to Norway's
+              sovereign wealth fund. Worked on NBIM's AI team in a group of three, automating internal
+              processes and building AI-powered tools for portfolio managers and analysts.
+            </p>
+            <div class="stat-row">
+              <div class="stat"><span class="stat-num" data-count="6000" data-suffix="+">0</span><span class="stat-label">applicants</span></div>
+              <div class="stat"><span class="stat-num" data-count="43">0</span><span class="stat-label">interns selected</span></div>
+              <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">person AI team</span></div>
+            </div>
+            <blockquote class="pull-quote">
+              "If I had seen what these interns would work on this summer two years ago, I'd have thought it was complete science fiction."
+              <cite>— Nicolai Tangen, CEO of NBIM</cite>
+            </blockquote>
+            <div class="xp-links">
+              <span class="xp-links-label">In the press</span>
+              <a href="https://e24.no/boers-og-finans/i/e7k2qg/studentene-lagde-ai-apper-for-oljefondet-helt-science-fiction" target="_blank" rel="noopener">E24 — "Helt science fiction" ↗</a>
+              <a href="https://www.kode24.no/artikkel/slo-6000-andre-sokere-konkurransen-er-beinhard/269328" target="_blank" rel="noopener">kode24 — "Slo 6000 andre søkere" ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Firi -->
+        <article class="xp reveal">
+          <div class="xp-side">
+            <span class="xp-dates">Jun – Aug 2025</span>
+          </div>
+          <div class="xp-body">
+            <div class="xp-top">
+              <h3>Software Development Intern</h3>
+              <span class="xp-org">Firi — Nordic crypto exchange</span>
+            </div>
+            <p>
+              Built an internal tool for spot-checking customers on the platform in a two-person team,
+              owning the backend. Picked up an entirely new language and shipped functionality continuously
+              for an internal team.
+            </p>
+            <ul class="chips small">
+              <li>Go</li><li>PostgreSQL</li><li>Protobuf</li><li>gRPC</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- StartupLab -->
+        <article class="xp reveal">
+          <div class="xp-side">
+            <span class="xp-dates">Summer 2023</span>
+          </div>
+          <div class="xp-body">
+            <div class="xp-top">
+              <h3>Intern — Investment Team</h3>
+              <span class="xp-org">StartupLab — Oslo startup hub &amp; early-stage investor</span>
+            </div>
+            <p>
+              Supported the investment team with go-to-market research, programming and internal tooling —
+              connecting ideas across domains to help evaluate early-stage companies.
+            </p>
+            <ul class="chips small">
+              <li>GTM research</li><li>Data &amp; tooling</li><li>Venture</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+      <header class="section-head reveal">
+        <span class="section-index">02</span>
+        <h2>Research</h2>
+        <p class="section-sub">Mathematics that touches real markets.</p>
+      </header>
+
+      <article class="research-card reveal">
+        <div class="research-text">
+          <span class="tag">With Prof. Fred Espen Benth · University of Oslo</span>
+          <h3>Constrained Kriging for Commodity Forward Curves</h3>
+          <p>
+            Reconstructing smooth, well-behaved forward price curves for crude oil (Brent &amp; WTI)
+            from a mix of liquid and illiquid (bid–ask) quotes. The method fits a Gaussian-process
+            <em>Kriging</em> model, derives the conditional Gaussian distribution over unobserved
+            maturities, and uses rejection sampling to enforce shape constraints and recover an
+            average curve — extending toward constrained Kriging with data augmentation.
+          </p>
+          <ul class="chips small">
+            <li>Gaussian processes</li><li>Kriging</li><li>Conditional Gaussians</li>
+            <li>Rejection sampling</li><li>Nelson–Siegel–Svensson</li><li>Python</li>
+          </ul>
+        </div>
+        <div class="research-figs">
+          <figure>
+            <img src="assets/kriging_curve.png" alt="Average Kriging curve sampled from illiquid quotes" loading="lazy" width="1280" height="960" />
+            <figcaption>Average curve recovered from illiquid quotes via rejection sampling.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/kriging_constrained.png" alt="Shape-constrained Svensson–Kriging fit" loading="lazy" width="1280" height="960" />
+            <figcaption>Shape-constrained Svensson–Kriging fit.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <header class="section-head reveal">
+        <span class="section-index">03</span>
+        <h2>Projects</h2>
+        <p class="section-sub">A few things I've built for fun and for keeps.</p>
+      </header>
+
+      <!-- Featured project -->
+      <article class="proj-feature reveal">
+        <div class="proj-feature-media">
+          <img src="assets/agent_workflow.png" alt="Multi-agent dividend reconciliation workflow" loading="lazy" width="2025" height="1579" />
+        </div>
+        <div class="proj-feature-body">
+          <span class="tag">Featured · Multi-agent AI</span>
+          <h3>Dividend Reconciliation Agent System</h3>
+          <p>
+            A proof-of-concept multi-agent LLM system that automates dividend reconciliation between
+            internal books and external custodians — cutting a manual process from
+            <strong>~60 minutes to ~5 minutes</strong> per run. Six specialized agents handle break
+            detection (deterministic), market validation (LLM + web search), diagnosis,
+            policy &amp; tax-treaty compliance, auto-resolution with deterministic safeguards, and
+            remediation drafting.
+          </p>
+          <ul class="chips small">
+            <li>Python</li><li>LLM agents</li><li>OpenAI</li><li>pandas</li><li>Finance</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Project grid -->
+      <div class="proj-grid">
+        <article class="card reveal">
+          <div class="card-top"><h3>EEG Motor-Imagery Classifier</h3><span class="card-emoji">🧠</span></div>
+          <p>Machine-learning pipeline on the BCI Competition IV-2a dataset, decoding motor-imagery intent from raw EEG signals.</p>
+          <ul class="chips small"><li>Python</li><li>Signal processing</li><li>ML</li></ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-top"><h3>Algorithmic Trading Platform</h3><span class="card-emoji">📈</span></div>
+          <p>A trading platform wired into the Alpaca API for backtesting strategies and running live execution.</p>
+          <ul class="chips small"><li>Python</li><li>Alpaca API</li><li>Backtesting</li></ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-top"><h3>Prediction-Market Trading</h3><span class="card-emoji">🎲</span></div>
+          <p>Tools for analyzing and trading prediction markets on Polymarket — pricing, signals and execution.</p>
+          <ul class="chips small"><li>Python</li><li>Polymarket</li><li>Quant</li></ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-top"><h3>Neural Network from Scratch</h3><span class="card-emoji">⚙️</span></div>
+          <p>A neural network built from first principles — forward pass and backprop by hand, no deep-learning frameworks.</p>
+          <ul class="chips small"><li>Python</li><li>NumPy</li><li>Deep learning</li></ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-top"><h3>Startup Success Predictor</h3><span class="card-emoji">🚀</span></div>
+          <p>ML models estimating early-stage startup outcomes from company signals — an outgrowth of my time around venture investing.</p>
+          <ul class="chips small"><li>Python</li><li>ML</li><li>Venture</li></ul>
+        </article>
+
+        <a class="card card-cta reveal" href="https://github.com/hermanscheele" target="_blank" rel="noopener">
+          <div class="card-top"><h3>More on GitHub</h3><span class="card-emoji">↗</span></div>
+          <p>Cellular automata, image processing, DSA visualizers and other experiments live on my GitHub.</p>
+          <span class="card-cta-link">github.com/hermanscheele</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-inner reveal">
+        <span class="section-index">04</span>
+        <h2>Let's talk</h2>
+        <p class="contact-lead">
+          I'm always happy to talk quant, AI, or an interesting piece of math.
+          The fastest way to reach me is email.
+        </p>
+        <div class="contact-actions">
+          <a class="btn btn-primary btn-lg" href="mailto:hermni31122@gmail.com">hermni31122@gmail.com</a>
+          <a class="btn btn-ghost btn-lg" href="https://www.linkedin.com/in/herman-scheele-14254622a/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost btn-lg" href="https://github.com/hermanscheele" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year">2026</span> Herman Scheele</span>
+    <span class="footer-mid">Mathematics · Quant · AI — Oslo</span>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
