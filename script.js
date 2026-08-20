@@ -97,22 +97,26 @@
     });
   }
 
-  /* ---- rotating role text ---- */
-  const rotator = document.getElementById("roleRotator");
-  if (rotator && !prefersReduced) {
-    const roles = ["mathematician", "quant researcher", "AI engineer", "builder"];
-    let i = 0;
-    const swap = () => {
-      const cur = rotator.querySelector("span");
-      const next = document.createElement("span");
-      i = (i + 1) % roles.length;
-      next.textContent = roles[i];
-      next.classList.add("in-anim");
-      rotator.appendChild(next);
-      cur.classList.add("out");
-      setTimeout(() => cur.remove(), 520);
-    };
-    setInterval(swap, 2600);
+  /* ---- typewriter skillset ---- */
+  const typeText = document.getElementById("typeText");
+  if (typeText) {
+    const words = ["Math", "Python, Golang, C++", "Research", "Quant finance", "Machine learning"];
+    if (prefersReduced) {
+      typeText.textContent = words[0];
+    } else {
+      let wi = 0, ci = 0, deleting = false;
+      const tick = () => {
+        const w = words[wi];
+        ci += deleting ? -1 : 1;
+        typeText.textContent = w.slice(0, ci);
+        let delay;
+        if (!deleting && ci === w.length) { deleting = true; delay = 1500; }
+        else if (deleting && ci === 0) { deleting = false; wi = (wi + 1) % words.length; delay = 350; }
+        else { delay = deleting ? 40 : 85; }
+        setTimeout(tick, delay);
+      };
+      setTimeout(tick, 600);
+    }
   }
 
   /* ---- animated stat counters ---- */
