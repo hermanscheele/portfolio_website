@@ -289,6 +289,37 @@ em { color: var(--ink); font-style: normal; font-weight: 500; }
 .xp-logo { height: 44px; width: auto; max-width: 170px; object-fit: contain; object-position: left center; filter: grayscale(1); opacity: .82; transition: filter .35s ease, opacity .35s ease; }
 .xp:hover .xp-logo { filter: grayscale(0); opacity: 1; }
 .xp-logo.firi { height: 66px; margin: -13px 0 -13px -20px; }
+
+/* firi architecture diagram */
+.fdiagram { margin: 24px 0 6px; max-width: 630px; }
+.fd-cap { display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-2); font-family: var(--font-display); margin-bottom: 14px; }
+.fdiagram svg { width: 100%; height: auto; display: block; }
+.fd-box, .fd-db { fill: var(--card-2); stroke: var(--line-2); stroke-width: 1.5; }
+.fd-glyph { fill: none; stroke: var(--line-2); stroke-width: 1.5; }
+.fd-dot { fill: var(--muted-2); }
+.fd-ui { fill: rgba(33, 29, 22, 0.10); }
+.fd-code { fill: var(--muted-2); }
+.fd-code--k { fill: var(--muted); }
+.fd-box--code { fill: #1e1c2b; stroke: rgba(255, 255, 255, 0.12); }
+.fd-c-kw  { fill: #c792ea; }
+.fd-c-fn  { fill: #82aaff; }
+.fd-c-str { fill: #c3e88d; }
+.fd-c-var { fill: #cbd3f5; }
+.fd-c-num { fill: #ffcb6b; }
+.fd-titlebar { fill: none; }
+.fd-barline { stroke: var(--line); stroke-width: 1; }
+.fd-mac-r { fill: #ff5f57; }
+.fd-mac-y { fill: #febc2e; }
+.fd-mac-g { fill: #28c840; }
+.fd-conn { stroke: var(--line-2); stroke-width: 2; }
+.fd-band { fill: none; stroke: var(--line-2); stroke-width: 1.2; opacity: .7; }
+.fd-packet { fill: var(--ink); }
+.fd-packet--back { fill: var(--muted); }
+.fd-title { fill: var(--ink); font-family: var(--font-display); font-weight: 600; font-size: 14px; }
+.fdiagram image { image-rendering: auto; }
+.fd-sub { fill: var(--muted); font-size: 11.5px; }
+.fd-elabel { fill: var(--muted); font-family: var(--font-display); font-weight: 500; font-size: 12px; letter-spacing: .04em; }
+@media (prefers-reduced-motion: reduce) { .fd-stream { display: none; } }
 .xp-dates { font-family: var(--font-display); font-size: 14px; color: var(--muted); }
 .xp-top { margin-bottom: 12px; }
 .xp-body h3 { font-size: 21px; }

@@ -112,7 +112,7 @@
       <header class="section-head reveal">
         <span class="section-index">01</span>
         <h2>Experience</h2>
-        <p class="section-sub">Summary of my previous summer internships.</p>
+        <p class="section-sub">Summary of my previous work experience.</p>
       </header>
 
       <div class="timeline">
@@ -156,7 +156,7 @@
           </div>
           <div class="xp-body">
             <div class="xp-top">
-              <h3>Software Development Intern</h3>
+              <h3>Software Engineering Intern</h3>
               <span class="xp-org">Firi — Nordic crypto exchange</span>
             </div>
             <p>
@@ -164,9 +164,76 @@
               owning the backend. Picked up an entirely new language and shipped functionality continuously
               for an internal team.
             </p>
-            <ul class="chips small">
-              <li>Go</li><li>PostgreSQL</li><li>Protobuf</li><li>gRPC</li>
-            </ul>
+            <div class="fdiagram" role="img" aria-label="Architecture: a TypeScript frontend streams gRPC calls to a Go backend, which turns each request into a SQL query and reads matching customers from a PostgreSQL database.">
+              <span class="fd-cap">How it worked</span>
+              <svg viewBox="0 0 720 226" xmlns="http://www.w3.org/2000/svg">
+                <!-- tech logos above each box -->
+                <image class="fd-logo" href="assets/ts_logo.png" x="68" y="8" width="46" height="46"/>
+                <image class="fd-logo" href="assets/go_logo.png" x="315" y="13" width="90" height="34"/>
+                <image class="fd-logo" href="assets/postgres_logo.png" x="614" y="11" width="44" height="45"/>
+
+                <g transform="translate(0,32)">
+                  <!-- ===== Frontend (browser window) ===== -->
+                  <rect class="fd-box" x="16" y="34" width="150" height="104" rx="13"/>
+                  <path class="fd-titlebar" d="M16 47 Q16 34 29 34 H153 Q166 34 166 47 V56 H16 Z"/>
+                  <line class="fd-barline" x1="16" y1="56" x2="166" y2="56"/>
+                  <circle class="fd-mac-r" cx="32" cy="45" r="2.7"/>
+                  <circle class="fd-mac-y" cx="41" cy="45" r="2.7"/>
+                  <circle class="fd-mac-g" cx="50" cy="45" r="2.7"/>
+                  <rect class="fd-ui" x="34" y="70" width="114" height="9" rx="4.5"/>
+                  <rect class="fd-ui" x="34" y="88" width="80" height="9" rx="4.5"/>
+                  <rect class="fd-ui" x="34" y="106" width="98" height="9" rx="4.5"/>
+                  <text class="fd-title" x="91" y="166" text-anchor="middle">Frontend</text>
+                  <text class="fd-sub" x="91" y="184" text-anchor="middle">client UI</text>
+
+                  <!-- ===== gRPC connection ===== -->
+                  <text class="fd-elabel" x="217" y="70" text-anchor="middle">gRPC</text>
+                  <line class="fd-conn" x1="166" y1="86" x2="270" y2="86"/>
+                  <g class="fd-stream">
+                    <circle class="fd-packet" r="3.6" cy="86"><animate attributeName="cx" values="166;270" dur="3.4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" dur="3.4s" begin="0s" repeatCount="indefinite"/></circle>
+                    <circle class="fd-packet" r="3.6" cy="86"><animate attributeName="cx" values="166;270" dur="3.4s" begin="1.7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" dur="3.4s" begin="1.7s" repeatCount="indefinite"/></circle>
+                    <circle class="fd-packet fd-packet--back" r="3.6" cy="86"><animate attributeName="cx" values="270;166" dur="3.4s" begin="0.85s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" dur="3.4s" begin="0.85s" repeatCount="indefinite"/></circle>
+                    <circle class="fd-packet fd-packet--back" r="3.6" cy="86"><animate attributeName="cx" values="270;166" dur="3.4s" begin="2.55s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.14;.86;1" dur="3.4s" begin="2.55s" repeatCount="indefinite"/></circle>
+                  </g>
+
+                  <!-- ===== Backend (dark code editor) ===== -->
+                  <rect class="fd-box fd-box--code" x="270" y="26" width="180" height="120" rx="13"/>
+                  <path class="fd-titlebar" d="M270 39 Q270 26 283 26 H437 Q450 26 450 39 V48 H270 Z"/>
+                  <circle class="fd-mac-r" cx="286" cy="37" r="2.7"/>
+                  <circle class="fd-mac-y" cx="295" cy="37" r="2.7"/>
+                  <circle class="fd-mac-g" cx="304" cy="37" r="2.7"/>
+                  <rect class="fd-c-kw"  x="286" y="58" width="42" height="6.5" rx="3"/>
+                  <rect class="fd-c-fn"  x="334" y="58" width="46" height="6.5" rx="3"/>
+                  <rect class="fd-c-kw"  x="300" y="74" width="30" height="6.5" rx="3"/>
+                  <rect class="fd-c-str" x="336" y="74" width="72" height="6.5" rx="3"/>
+                  <rect class="fd-c-var" x="300" y="90" width="98" height="6.5" rx="3"/>
+                  <rect class="fd-c-kw"  x="286" y="106" width="52" height="6.5" rx="3"/>
+                  <rect class="fd-c-num" x="344" y="106" width="64" height="6.5" rx="3"/>
+                  <rect class="fd-c-var" x="300" y="122" width="80" height="6.5" rx="3"/>
+                  <text class="fd-title" x="360" y="166" text-anchor="middle">Backend</text>
+                  <text class="fd-sub" x="360" y="184" text-anchor="middle">Go · builds the query</text>
+
+                  <!-- ===== SQL connection ===== -->
+                  <text class="fd-elabel" x="519" y="70" text-anchor="middle">SQL query</text>
+                  <line class="fd-conn" x1="450" y1="86" x2="588" y2="86"/>
+                  <g class="fd-stream">
+                    <circle class="fd-packet" r="3.6" cy="86"><animate attributeName="cx" values="450;588" dur="3.8s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.88;1" dur="3.8s" begin="0s" repeatCount="indefinite"/></circle>
+                    <circle class="fd-packet" r="3.6" cy="86"><animate attributeName="cx" values="450;588" dur="3.8s" begin="1.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.88;1" dur="3.8s" begin="1.9s" repeatCount="indefinite"/></circle>
+                    <circle class="fd-packet fd-packet--back" r="3.6" cy="86"><animate attributeName="cx" values="588;450" dur="3.8s" begin="0.95s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.88;1" dur="3.8s" begin="0.95s" repeatCount="indefinite"/></circle>
+                    <circle class="fd-packet fd-packet--back" r="3.6" cy="86"><animate attributeName="cx" values="588;450" dur="3.8s" begin="2.85s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.88;1" dur="3.8s" begin="2.85s" repeatCount="indefinite"/></circle>
+                  </g>
+
+                  <!-- ===== PostgreSQL (cylinder) ===== -->
+                  <path class="fd-db" d="M588 52 V120 A48 14 0 0 0 684 120 V52"/>
+                  <path class="fd-band" d="M588 80 A48 14 0 0 0 684 80"/>
+                  <path class="fd-band" d="M588 100 A48 14 0 0 0 684 100"/>
+                  <ellipse class="fd-db" cx="636" cy="52" rx="48" ry="14"/>
+                  <text class="fd-title" x="636" y="166" text-anchor="middle">PostgreSQL</text>
+                  <text class="fd-sub" x="636" y="184" text-anchor="middle">flagged customers</text>
+                </g>
+              </svg>
+            </div>
+            
           </div>
         </article>
 
