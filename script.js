@@ -11,80 +11,14 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---- reveal on scroll ---- */
-  const revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && !prefersReduced) {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("in");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
-    );
-    revealEls.forEach((el) => io.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("in"));
-  }
-
-  /* ---- nav: scrolled state + scroll progress ---- */
+  /* ---- nav: scrolled state ---- */
   const nav = document.getElementById("nav");
-  const progress = document.querySelector(".scroll-progress span");
   function onScroll() {
     const y = window.scrollY || document.documentElement.scrollTop;
     if (nav) nav.classList.toggle("scrolled", y > 12);
-    if (progress) {
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      progress.style.width = (h > 0 ? (y / h) * 100 : 0) + "%";
-    }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
-
-  /* ---- active nav link via section observer ---- */
-  const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
-  const linkFor = (id) => navLinks.find((a) => a.getAttribute("href") === "#" + id);
-  const sections = navLinks
-    .map((a) => document.querySelector(a.getAttribute("href")))
-    .filter(Boolean);
-  if ("IntersectionObserver" in window && sections.length) {
-    const so = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            navLinks.forEach((l) => l.classList.remove("active"));
-            const link = linkFor(e.target.id);
-            if (link) link.classList.add("active");
-          }
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px" }
-    );
-    sections.forEach((s) => so.observe(s));
-  }
-
-  /* ---- cursor spotlight ---- */
-  const glow = document.querySelector(".cursor-glow");
-  if (glow && !isTouch && !prefersReduced) {
-    let rafId = null,
-      tx = 0,
-      ty = 0;
-    window.addEventListener("mousemove", (e) => {
-      tx = e.clientX;
-      ty = e.clientY;
-      if (!rafId) {
-        rafId = requestAnimationFrame(() => {
-          glow.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
-          rafId = null;
-        });
-      }
-    });
-  } else if (glow) {
-    glow.style.display = "none";
-  }
 
   /* ---- per-card pointer spotlight ---- */
   if (!isTouch) {
