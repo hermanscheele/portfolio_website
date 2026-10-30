@@ -331,6 +331,16 @@ em { color: var(--ink); font-style: normal; font-weight: 500; }
 .proj-feature-media--gif { background: #0a0a0c; border-right-color: rgba(0, 0, 0, 0.25); padding: 14px; overflow: hidden; }
 .proj-feature-media--gif img { height: 100%; width: auto; max-width: none; max-height: none; transform: rotate(90deg); image-rendering: pixelated; border-radius: 6px; }
 .proj-feature-media:not(.proj-feature-media--gif) img { max-height: 340px; }
+.proj-feature-media--blur { padding: 22px; gap: 16px; align-content: center; }
+#blurSrc { display: none; }
+.blur-demo { display: flex; align-items: center; justify-content: center; gap: 18px; width: 100%; }
+#blurCanvas { width: min(46%, 210px); height: auto; aspect-ratio: 3 / 4; border-radius: 10px; border: 1px solid var(--line); background: var(--bg-2); }
+.blur-side { display: flex; flex-direction: column; align-items: center; width: min(48%, 230px); }
+#gaussCanvas { width: 100%; height: auto; aspect-ratio: 6 / 5; }
+.blur-sigma { margin: 4px 0 0; font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.blur-kernel { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.blur-slider { display: flex; align-items: center; gap: 12px; width: min(100%, 460px); font-family: var(--font-display); color: var(--muted); }
+.blur-slider input { flex: 1; accent-color: var(--ink); cursor: pointer; }
 .proj-feature-body { padding: 22px 30px; align-self: center; }
 .proj-feature-body h3 { font-size: clamp(19px, 2.4vw, 24px); margin: 4px 0 10px; }
 .proj-feature-body p { color: var(--muted); font-size: 14.5px; }
